@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>車一覧</title></head>
+<body>
+    <h1>車一覧</h1>
+    <ul>
+        <li th:each="car : ${cars}">
+            <span th:text="${car.name} + ' (' + ${car.price} + '円)'" ></span>
+            <a th:href="@{/cart/add(id=${car.carId})}">カートに追加</a>
+        </li>
+    </ul>
+    <a href="/cart">カートを見る</a>
+</body>
+</html>
