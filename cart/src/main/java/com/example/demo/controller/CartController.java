@@ -30,7 +30,6 @@ public class CartController {
         return null;
     }
 
-
     @GetMapping("/cars")
     public String showCars(Model model) {
         model.addAttribute("cars", cars);

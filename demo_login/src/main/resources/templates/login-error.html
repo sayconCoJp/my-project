@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ログインエラー</title>
+    <style>
+        #content1 {
+            color: red;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="content1">
+        <h2>ログインエラーが発生しました。</h2>
+    </div>
+    <p><a th:href="@{/}">ログイン画面へ戻る</a></p>
+</body>
+</html>

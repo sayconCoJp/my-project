@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>ログイン</title>
+    <meta charset="UTF-8">
+    <title>ログインページ</title>
+    <style>
+        #center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <h2>ログイン</h2>
-    <form action="@{/login}" method="post">
-        <label>ログインID: <input type="text" name="loginId"></label><br>
-        <label>パスワード: <input type="password" name="password"></label><br>
-        <button type="submit">ログイン</button>
-    </form>
-    <p th:if="${error}" style="color:red;" th:text="${error}"></p>
+    <div id="center">
+        <form th:action="@{/login1}" method="post">
+            ユーザーID：<input type="text" name="id" required><br>
+            パスワード：<input type="password" name="pass" required><br>
+            <button type="submit">ログイン</button>
+        </form>
+    </div>
 </body>
 </html>
