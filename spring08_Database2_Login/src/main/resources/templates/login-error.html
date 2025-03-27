@@ -1,0 +1,13 @@
+<!-- src/main/resources/templates/login-error.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ログインエラー</title>
+</head>
+<body>
+    <h2>ログインエラー</h2>
+    <p th:text="${error}"></p>
+    <a th:href="@{/}">ログインページへ戻る</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数当てゲーム</title>
+</head>
+<body>
+    <h3>0-9の整数で数を当ててください!</h3>
+    <form th:action="@{/game}" method="get">
+        <input type="text" size="10" name="guess">
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>

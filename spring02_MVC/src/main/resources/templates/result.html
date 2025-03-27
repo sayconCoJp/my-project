@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ゲーム結果</title>
+</head>
+<body>
+    <h1>ゲームの結果は!</h1>
+    <!-- model.addAttribute("k", kazuate) で渡したオブジェクトからメッセージを出力 -->
+    <p th:text="${k.message}"></p>
+    <!-- オブジェクト全体（toString() の内容）を表示 -->
+    <p th:text="${k}"></p>
+    <a href="/">再ゲーム</a>
+</body>
+</html>

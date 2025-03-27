@@ -1,0 +1,22 @@
+<!-- src/main/resources/templates/main.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>メインページ</title>
+</head>
+<body>
+
+    <!-- ヘッダーの挿入 -->
+    <header th:replace="header :: header"></header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <p>ここにメインコンテンツが入ります。</p>
+    </main>
+
+    <!-- フッターの挿入 -->
+    <footer th:replace="footer :: footer"></footer>
+
+</body>
+</html>

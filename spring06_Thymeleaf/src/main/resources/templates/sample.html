@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body th:style="'background-color:' + ${color}">
+	<!-- 基本的な使い方 -->
+	<p>[[${msg}]]</p>
+	
+	<p th:utext="${msg}">ここにメッセージ</p>
+
+	<p>[[${msg == 'Hello World'}]]</p>
+	<!-- msgがHello Worldの場合 -->
+
+	<p>[[${msg.equals('Hello World')}]]</p>
+	<!-- msgがHello Worldの場合 -->
+
+	<p>[[${age == 20}]]</p>
+	<!-- ageが19の場合 -->
+
+	<p>[[${age <= 20}]]</p>
+	<!-- ageが19の場合 -->
+
+	<p th:if="${age >= 20}">お酒が飲めます</p>
+	<p th:unless="${age >= 20}">まだ飲めません</p>
+	<!-- ageが19の場合 -->
+
+	<p th:if="${user == null}">ユーザーが存在しません</p>
+	<!-- userがnullの場合 -->
+
+	<p th:if="${name == ''}">名前が入力されていません</p>
+	<!-- nameが空文字の場合 -->
+
+	<!-- 文字列がnullまたは空文字の場合 -->
+	<p th:if="${#strings.isEmpty(name)}">名前が未入力です</p>
+
+	<div th:switch="${bloodType}">
+		<p th:case="'A'">慎重な性格</p>
+		<p th:case="'B'">大胆な性格</p>
+		<p th:case="'O'">おおらかな性格</p>
+		<p th:case="*">不思議な性格</p>
+	</div>
+
+	<ul>
+		<li th:each="name : ${names}">[[${name}]]</li>
+	</ul>
+	<!-- namesが4人の名前の場合 -->
+	
+	<p th:text="${#numbers.formatCurrency(price)}"></p>
+	
+	<p th:text="${#temporals.format(today, 'yyyy年MM月dd日(E)')}"></p>
+
+</body>
+
+</html>

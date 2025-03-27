@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+</head>
+<body th:style="'background-color: ' + ${bgColor}">
+  今は <span th:text="${weather}"></span> なんですね。
+</body>
+</html>

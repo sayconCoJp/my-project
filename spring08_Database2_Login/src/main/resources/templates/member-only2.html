@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>メンバー専用ページ</title>
+</head>
+<body>
+    <p>メンバーだけのページです。</p>
+    <p>ようこそ <span th:text="${session.id}"></span> さん</p>
+
+    <a th:href="@{/video}" target="_blank">別のタブでビデオを見る</a>
+</body>
+</html>

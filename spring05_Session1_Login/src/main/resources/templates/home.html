@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ホーム</title>
+</head>
+<body>
+    <h1>ホーム画面</h1>
+
+    <!-- session から直接 loginUser を取得 -->
+    <p>ログインユーザー：<span th:text="${session.userId}"></span></p>
+
+    <!-- /logout へ POSTリクエストでログアウト -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">ログアウト</button>
+    </form>
+    
+    <p><a th:href="@{/video}">ビデオを見る</a></p>
+</body>
+</html>

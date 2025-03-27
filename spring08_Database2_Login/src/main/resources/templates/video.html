@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ビデオページ</title>
+</head>
+<body>
+    <p>こんにちは <span th:text="${session.id}"></span> さん、ビデオを楽しんでください。</p>
+
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/N4muWZJ4yt8?si=pkMyFmZUEuJ7Blf9" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+</body>
+</html>

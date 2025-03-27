@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>天気選択</title>
+</head>
+
+<body>
+    <h1>天気を選んでください</h1>
+    
+    <form th:action="@{/weather}" method="get">
+        <button type="submit" name="weather" value="晴れ">晴れ</button>
+        <button type="submit" name="weather" value="曇り">曇り</button>
+        <button type="submit" name="weather" value="雨">雨</button>
+    </form>
+</body>
+
+</html>

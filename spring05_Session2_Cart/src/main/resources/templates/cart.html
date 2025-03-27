@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>買い物かご</title></head>
+<body>
+    <h1>買い物かご</h1>
+    <ul>
+        <li th:each="item : ${cart}">
+            <span th:text="${item}" ></span>
+        </li>
+    </ul>
+    <p><a href="/cars">車一覧へ</a></p>
+    <p><a href="/cart/clear">カートを空にする</a></p>
+</body>
+</html>
